@@ -1,8 +1,15 @@
+import java.util.Scanner; 
+
 public class Calculator {
     public static void main(String[] args) {
 
-        double num1 = 10.5;
-        double num2 = 5.0;
+        Scanner input = new
+        Scanner(System.in);
+
+        System.out.print("Enter First Number: ");
+        double num1 = input.nextDouble();
+        System.out.print("Enter Second Number: ");
+        double num2 = input.nextDouble();
 
         double addition = num1 + num2;
         System.out.println("Addition: " + addition);
@@ -15,6 +22,8 @@ public class Calculator {
 
         double division = num1 / num2;
         System.out.println("Division: " + division);
+
+        input.close();
 
     }  
 }   
