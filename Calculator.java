@@ -6,22 +6,43 @@ public class Calculator {
         Scanner input = new
         Scanner(System.in);
 
+        System.out.println("====JAVA CALCULATOR====");
+        System.out.println("1. Addition");
+        System.out.println("2. Subtraction");
+        System.out.println("3. Multiplication");
+        System.out.println("4. Divison");
+        System.out.println("Enter your choice:");
+
+        int choice = input.nextInt();
+
         System.out.print("Enter First Number: ");
         double num1 = input.nextDouble();
         System.out.print("Enter Second Number: ");
         double num2 = input.nextDouble();
 
-        double addition = num1 + num2;
-        System.out.println("Addition: " + addition);
+        switch(choice) {
+            case 1:
+                System.out.println(" Addition:" + (num1+num2) );
+                break;
 
-        double subtraction = num1 - num2;
-        System.out.println("Subtraction: " + subtraction);
+                case 2:
+                    System.out.println("Subtration:" + (num1-num2));
+                    break;
 
-        double multiplication = num1 * num2;
-        System.out.println("Multiplication: " + multiplication);
+                    case 3:
+                        System.out.println("Multiplication:" + (num1*num2));
+                        break;
 
-        double division = num1 / num2;
-        System.out.println("Division: " + division);
+                        case 4:
+                            System.out.println("Divison:" + (num1/num2));
+                            break;
+
+                            default:
+                                System.out.println("Invalid Choice");
+
+        }
+
+    
 
         input.close();
 
