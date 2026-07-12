@@ -6,6 +6,9 @@ public class Calculator {
         Scanner input = new
         Scanner(System.in);
 
+        char choice;
+        do {
+
         System.out.println("====JAVA CALCULATOR====");
         System.out.println("1. Addition");
         System.out.println("2. Subtraction");
@@ -13,14 +16,14 @@ public class Calculator {
         System.out.println("4. Divison");
         System.out.println("Enter your choice:");
 
-        int choice = input.nextInt();
+        int operation = input.nextInt();
 
         System.out.print("Enter First Number: ");
         double num1 = input.nextDouble();
         System.out.print("Enter Second Number: ");
         double num2 = input.nextDouble();
 
-        switch(choice) {
+        switch(operation) {
             case 1:
                 System.out.println(" Addition:" + (num1+num2) );
                 break;
@@ -41,8 +44,9 @@ public class Calculator {
                                 System.out.println("Invalid Choice");
 
         }
-
-    
+         System.out.println("Do you want to continue? (Y/N): ");
+        choice = input.next().charAt(0);
+    }while (choice == 'Y' || choice == 'y');
 
         input.close();
 
