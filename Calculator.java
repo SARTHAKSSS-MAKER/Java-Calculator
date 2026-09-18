@@ -6,7 +6,7 @@ public class Calculator {
         Scanner input = new
         Scanner(System.in);
 
-        char choice;
+        char choic;
         do {
 
         System.out.println("====JAVA CALCULATOR====");
